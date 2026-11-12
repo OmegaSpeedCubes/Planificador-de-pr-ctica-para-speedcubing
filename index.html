@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SpeedCubing Trainer</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600&family=Barlow+Condensed:wght@600;700&family=Michroma&family=Audiowide&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600&family=Barlow+Condensed:wght@600;700&family=Michroma&family=Audiowide&family=Open+Sans:wght@400;600;800&family=Barlow:wght@400;600&family=Jost:wght@400;600&family=Exo+2:wght@400;600&family=Federo&family=Josefin+Sans:wght@400;600&family=League+Spartan:wght@600;800&family=Outfit:wght@400;600&display=swap">
 <style>
 :root{--bg:#F2F4F8;--sf:#FFFFFF;--ink:#17203A;--mut:#5B6580;--ln:#DDE2EC;--cal:#E8B100;--main:#2F6FDE;--acc:#2E9E5B;--cool:#E4572E;--bad:#C62828;--ac:var(--ink);--on-ac:var(--bg);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121722;--sf:#1B2333;--ink:#E8ECF4;--mut:#9AA5BF;--ln:#2D374C;--cal:#F2C230;--main:#5B93F5;--acc:#4CC17F;--cool:#F27A57;--bad:#FF7B72;color-scheme:dark}}
@@ -81,7 +81,7 @@ input[type="file"]{padding:8px}
 .themes button[aria-pressed="true"]{border-color:var(--ac)}
 .themes small{color:var(--mut)}
 .sw{display:block;width:100%;height:10px;border-radius:5px;margin-top:6px}
-:root[data-style="aero"],:root[data-style="dorfic"],:root[data-style="space"],:root[data-style="y2k"]{--cal:#E8B100;--main:#2F6FDE;--acc:#2E9E5B;--cool:#E4572E;--bad:#C62828;color-scheme:light}
+:root[data-style="aero"],:root[data-style="dorfic"],:root[data-style="space"],:root[data-style="y2k"],:root[data-style="moderne"],:root[data-style="bauhaus"]{--cal:#E8B100;--main:#2F6FDE;--acc:#2E9E5B;--cool:#E4572E;--bad:#C62828;color-scheme:light}
 :root[data-style="aero"]{--bg:#BFE6FF;--bg2:#DDF6D4;--sf:rgba(255,255,255,.62);--ink:#0E3552;--mut:#40657F;--ln:rgba(52,140,200,.38);--ac:#1B8FE0;--on-ac:#FFFFFF}
 :root[data-style="aero"] body{font-family:"Segoe UI",Frutiger,"Frutiger Linotype","Figtree",system-ui,sans-serif;background:radial-gradient(circle at 14% 7%,rgba(255,255,255,.9) 0 64px,transparent 66px),radial-gradient(circle at 90% 20%,rgba(255,255,255,.65) 0 40px,transparent 42px),radial-gradient(circle at 78% 80%,rgba(255,255,255,.5) 0 56px,transparent 58px),linear-gradient(180deg,var(--bg),var(--bg2));background-attachment:fixed}
 :root[data-style="aero"] h1,:root[data-style="aero"] h2,:root[data-style="aero"] h3,:root[data-style="aero"] .tabs button{font-family:"Segoe UI",Frutiger,"Figtree",system-ui,sans-serif}
@@ -178,6 +178,83 @@ body.timing #toast{bottom:calc(300px + env(safe-area-inset-bottom,0px))}
 :root[data-style="y2k"] .x{width:34px;height:34px;margin:3px}
 :root[data-style="y2k"] .tmb.on{box-shadow:0 0 8px var(--c)}
 :root[data-style="y2k"] .tmclock{font-family:"Audiowide",system-ui,sans-serif;font-weight:400}
+.cnt{display:block;width:fit-content;margin-top:6px;padding:2px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--ln);font-size:.8rem;font-weight:600}
+.cnt.zero{color:var(--mut);font-weight:400}
+:root[data-style="aero"] body,:root[data-style="aero"] .tabs button,:root[data-style="aero"] h1,:root[data-style="aero"] h2,:root[data-style="aero"] h3{font-family:"Open Sans","Segoe UI",Frutiger,system-ui,sans-serif}
+:root[data-style="dorfic"] body,:root[data-style="dorfic"] .tabs button{font-family:"Barlow","Arial Narrow",system-ui,sans-serif}
+:root[data-style="space"] body,:root[data-style="space"] .tabs button{font-family:"Jost",Futura,"Century Gothic",system-ui,sans-serif}
+:root[data-style="y2k"] body,:root[data-style="y2k"] .tabs button{font-family:"Exo 2",system-ui,sans-serif}
+:root[data-style="moderne"]{--bg:#F3ECDD;--sf:#FBF7EC;--ink:#1B2A3A;--mut:#5E6B78;--ln:#CFC6B0;--ac:#1C7C8C;--on-ac:#FFFFFF;--coral:#E4795B}
+:root[data-style="moderne"] body,:root[data-style="moderne"] .tabs button{font-family:"Josefin Sans","Century Gothic",Futura,system-ui,sans-serif}
+:root[data-style="moderne"] body{font-size:17px;background:repeating-linear-gradient(180deg,transparent 0 46px,rgba(27,42,58,.05) 46px 47px,transparent 47px 51px,rgba(27,42,58,.05) 51px 52px),var(--bg)}
+:root[data-style="moderne"] h1,:root[data-style="moderne"] h2,:root[data-style="moderne"] h3,:root[data-style="moderne"] .tmclock{font-family:"Federo","Josefin Sans",system-ui,sans-serif;font-weight:400}
+:root[data-style="moderne"] h1{font-size:2rem;letter-spacing:.02em}
+:root[data-style="moderne"] h1::after{content:"";display:block;width:min(220px,60%);height:15px;margin-top:8px;background:linear-gradient(var(--ac),var(--ac)) 0 0/100% 3px no-repeat,linear-gradient(var(--coral),var(--coral)) 0 6px/70% 3px no-repeat,linear-gradient(var(--ink),var(--ink)) 0 12px/40% 3px no-repeat}
+:root[data-style="moderne"] h2,:root[data-style="moderne"] h3{text-transform:uppercase;letter-spacing:.08em;font-size:1.05rem}
+:root[data-style="moderne"] .panel,:root[data-style="moderne"] .day{border:2px solid var(--ink);border-radius:10px 38px 38px 10px;background-image:linear-gradient(var(--ac),var(--ac)),linear-gradient(var(--coral),var(--coral));background-size:100% 5px,62% 3px;background-position:0 0,0 9px;background-repeat:no-repeat;box-shadow:inset 0 0 0 4px var(--sf),inset 0 0 0 5px rgba(27,42,58,.3)}
+:root[data-style="moderne"] .panel,:root[data-style="moderne"] .day{padding-top:24px}
+:root[data-style="moderne"] input,:root[data-style="moderne"] select,:root[data-style="moderne"] textarea{border:2px solid var(--ink);border-radius:14px;background:#FFFDF7}
+:root[data-style="moderne"] .pri,:root[data-style="moderne"] .sec,:root[data-style="moderne"] .chip{border:2px solid var(--ink);border-radius:999px}
+:root[data-style="moderne"] .chip{border-radius:18px}
+:root[data-style="moderne"] .sec,:root[data-style="moderne"] .chip{background:linear-gradient(180deg,#FFFDF7,#E6DEC8);color:var(--ink)}
+:root[data-style="moderne"] .pri,:root[data-style="moderne"] .chip[aria-pressed="true"]{background-image:linear-gradient(180deg,#3FA3B3,#1C7C8C 50%,#14606D);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+:root[data-style="moderne"] .row{background:#FFFDF7;border-radius:4px 22px 22px 4px}
+:root[data-style="moderne"] .lib li{border-radius:4px 22px 22px 4px}
+:root[data-style="moderne"] .stack{border:2px solid var(--ink);border-radius:999px;background:#FFFDF7}
+:root[data-style="moderne"] .tabs{border-bottom:4px double var(--ink)}
+:root[data-style="moderne"] .ic{stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:root[data-style="moderne"] .x,:root[data-style="moderne"] .step button{border:2px solid var(--ink);border-radius:50%;background:#FFFDF7;color:var(--ink);box-shadow:0 0 0 3px #E6DEC8,0 0 0 4px var(--ink)}
+:root[data-style="moderne"] .x{width:30px;height:30px;margin:6px}
+:root[data-style="moderne"] .step{gap:12px}
+:root[data-style="moderne"] .dot{border-radius:50%}
+.chip{position:relative}
+:root[data-style="aero"] .chip{border-radius:50%}
+:root[data-style="aero"] .chip::after{content:"";position:absolute;top:2px;left:20%;width:60%;height:30%;border-radius:50%;background:linear-gradient(rgba(255,255,255,.8),rgba(255,255,255,0));pointer-events:none}
+:root[data-style="space"] .chip{border-radius:50% 50% 10px 10px/70% 70% 10px 10px}
+:root[data-style="space"] .chip[aria-pressed="true"]::after{content:"";position:absolute;bottom:3px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--lime);box-shadow:0 0 5px var(--lime)}
+:root[data-style="y2k"] .chip{border-radius:60% 40% 55% 45%/50% 55% 45% 50%}
+:root[data-style="y2k"] .chip[aria-pressed="true"]::after{content:"\2726";position:absolute;top:-7px;right:-3px;font-size:13px;line-height:1;color:var(--pink);text-shadow:none}
+:root[data-style="moderne"] .chip{border-radius:4px 20px 20px 4px}
+:root[data-style="moderne"] .chip[aria-pressed="true"]::after{content:"";position:absolute;left:6px;right:6px;bottom:4px;height:5px;background:linear-gradient(var(--coral),var(--coral)) 0 0/100% 2px no-repeat,linear-gradient(var(--coral),var(--coral)) 0 3px/60% 2px no-repeat}
+.top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.lang{display:flex;flex:none;margin-top:6px}
+.lang button{min-height:36px;min-width:42px;padding:0 10px;border:1px solid var(--ln);background:var(--sf);color:var(--ink);font-weight:600;font-size:.85rem;cursor:pointer}
+.lang button:first-child{border-radius:10px 0 0 10px}
+.lang button:last-child{border-radius:0 10px 10px 0;border-left:0}
+.lang button[aria-pressed="true"]{background:var(--ac);color:var(--on-ac);border-color:var(--ac)}
+:root[data-style="aero"] .lang button:first-child,:root[data-style="space"] .lang button:first-child,:root[data-style="y2k"] .lang button:first-child{border-radius:999px 0 0 999px}
+:root[data-style="aero"] .lang button:last-child,:root[data-style="space"] .lang button:last-child,:root[data-style="y2k"] .lang button:last-child{border-radius:0 999px 999px 0}
+:root[data-style="dorfic"] .lang button{border-radius:0}
+:root[data-style="moderne"] .lang button{border:2px solid var(--ink)}
+:root[data-style="moderne"] .lang button:last-child{border-left:0}
+:root[data-style="bauhaus"]{--bg:#F3EFE6;--sf:#FFFFFF;--ink:#111111;--mut:#555555;--ln:#111111;--ac:#D62828;--on-ac:#FFFFFF;--cal:#F2B705;--main:#1D4E9E;--acc:#D62828;--cool:#222222;--red:#D62828;--yel:#F2B705;--blu:#1D4E9E}
+:root[data-style="bauhaus"] body,:root[data-style="bauhaus"] .tabs button{font-family:"Outfit","Century Gothic",Futura,system-ui,sans-serif}
+:root[data-style="bauhaus"] h1,:root[data-style="bauhaus"] h2,:root[data-style="bauhaus"] h3,:root[data-style="bauhaus"] .tmclock{font-family:"League Spartan","Outfit",system-ui,sans-serif;text-transform:lowercase;font-weight:800;letter-spacing:-.01em}
+:root[data-style="bauhaus"] h1{font-size:2.1rem}
+:root[data-style="bauhaus"] h1::after{content:"";display:block;width:64px;height:8px;margin-top:6px;background:var(--red)}
+:root[data-style="bauhaus"] .panel,:root[data-style="bauhaus"] .day{border:3px solid #111;border-radius:0;box-shadow:6px 6px 0 #111;padding-top:40px;background-image:radial-gradient(circle,var(--red) 0 8px,transparent 8.5px),linear-gradient(var(--yel),var(--yel)),linear-gradient(135deg,transparent 50%,var(--blu) 50%);background-size:18px 18px,16px 16px,18px 18px;background-position:left 16px top 12px,left 44px top 13px,left 70px top 12px;background-repeat:no-repeat}
+:root[data-style="bauhaus"] input,:root[data-style="bauhaus"] select,:root[data-style="bauhaus"] textarea{border:3px solid #111;border-radius:0;background:#fff}
+:root[data-style="bauhaus"] .pri,:root[data-style="bauhaus"] .sec,:root[data-style="bauhaus"] .chip,:root[data-style="bauhaus"] .step button,:root[data-style="bauhaus"] .lang button,:root[data-style="bauhaus"] .themes button{border:3px solid #111;border-radius:0}
+:root[data-style="bauhaus"] .lang button:last-child{border-left:0}
+:root[data-style="bauhaus"] .lang button[aria-pressed="true"]{border-color:#111}
+:root[data-style="bauhaus"] .pri,:root[data-style="bauhaus"] .sec{box-shadow:3px 3px 0 #111;text-transform:lowercase;font-weight:600}
+:root[data-style="bauhaus"] .sec{background:#fff;color:#111}
+:root[data-style="bauhaus"] .pri{background:var(--red);color:#fff}
+:root[data-style="bauhaus"] .pri:active,:root[data-style="bauhaus"] .sec:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #111}
+:root[data-style="bauhaus"] .chip{background:#fff;color:#111}
+:root[data-style="bauhaus"] .chip[aria-pressed="true"]{background:var(--yel);color:#111;border-radius:50%}
+:root[data-style="bauhaus"] .row{background:#fff;border:3px solid #111;border-left:10px solid var(--c);border-radius:0}
+:root[data-style="bauhaus"] .lib li{border:3px solid #111;border-left:10px solid var(--c);border-radius:0;box-shadow:4px 4px 0 #111}
+:root[data-style="bauhaus"] .stack{height:18px;border:3px solid #111;border-radius:0;background:#fff}
+:root[data-style="bauhaus"] .tabs{border-bottom:4px solid #111}
+:root[data-style="bauhaus"] .ic{stroke-width:2.8;stroke-linecap:butt;stroke-linejoin:miter}
+:root[data-style="bauhaus"] .x{width:32px;height:32px;margin:4px;border:3px solid #111;border-radius:0;background:#fff;color:#111}
+:root[data-style="bauhaus"] .cnt{border:2px solid #111;border-radius:0}
+:root[data-style="bauhaus"] .themes button[aria-pressed="true"]{box-shadow:4px 4px 0 var(--red)}
+:root[data-style="bauhaus"] .tm{border-radius:0;border-width:3px}
+:root[data-style="bauhaus"] .tmb{border-radius:0;border-width:3px}
+:root[data-style="bauhaus"] .tmb.b-cal.on{color:#111;text-shadow:none}
+:root[data-style="bauhaus"] .dot{border-radius:0}
 #toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .2s}
 #toast.on{opacity:1}
 @media(prefers-reduced-motion:reduce){#toast{transition:none}}
@@ -185,8 +262,8 @@ body.timing #toast{bottom:calc(300px + env(safe-area-inset-bottom,0px))}
 </head>
 <body>
 <main>
-<h1>SpeedCubing Trainer</h1>
-<p class="tag">Diseña tu semana de speedcubing: elige los días, la duración de cada sesión y los ejercicios, con sus series y su descripción.</p>
+<div class="top"><h1>SpeedCubing Trainer</h1><div class="lang" role="group" aria-label="Idioma / Language"><button data-act="lang" data-l="es" aria-pressed="true">ES</button><button data-act="lang" data-l="en" aria-pressed="false">EN</button></div></div>
+<p class="tag" id="tag"></p>
 <div id="app"></div>
 </main>
 <div id="timer"></div>
@@ -226,7 +303,7 @@ const sorted=d=>(S.assign[d]||[]).map(ex).filter(Boolean).sort((a,b)=>bi(a.b)-bi
 const dayMin=d=>sorted(d).reduce((s,e)=>s+e.m,0);
 const activeDays=()=>S.active.map((a,i)=>a?i:-1).filter(i=>i>=0);
 const fmt=m=>m>=60?(Math.floor(m/60)+' h'+(m%60?' '+m%60+' min':'')):m+' min';
-function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),2200)}
+function toast(m){const t=$('#toast');t.textContent=tx(m);t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),2200)}
 
 function dayCard(d){
   const list=sorted(d),tot=dayMin(d),base=Math.max(S.dur,tot),diff=S.dur-tot;
@@ -264,16 +341,16 @@ function exTab(){
   <div class="btns"><button class="pri" data-act="save">${e?'Guardar cambios':'Añadir ejercicio'}</button>${e?'<button class="sec" data-act="cancel">Cancelar</button>':''}</div></section>`;
   BLOCKS.forEach(b=>{
     const l=S.ex.filter(x=>x.b===b.id);if(!l.length)return;
-    h+=`<h3 class="grp b-${b.id}">${nm(b)}</h3><ul class="lib b-${b.id}">${l.map(x=>`<li><strong>${esc(x.n)}</strong><small>${x.m} min${x.s>1?', '+x.s+' series':''}</small>${x.d?`<p>${esc(x.d)}</p>`:''}<div class="acts"><button data-act="edit" data-id="${x.id}">Editar</button><button data-act="del" data-id="${x.id}">Eliminar</button></div></li>`).join('')}</ul>`;
+    h+=`<h3 class="grp b-${b.id}">${nm(b)}</h3><ul class="lib b-${b.id}">${l.map(x=>`<li><strong>${esc(x.n)}</strong><small>${x.m} min${x.s>1?', '+x.s+' series':''}</small>${cntTxt(x.id)}${x.d?`<p>${esc(x.d)}</p>`:''}<div class="acts"><button data-act="edit" data-id="${x.id}">Editar</button><button data-act="del" data-id="${x.id}">Eliminar</button></div></li>`).join('')}</ul>`;
   });
   return h;
 }
 function render(){
   if(T&&T.p!==R.cur){clearT();T=null;renderTimer()}
   const f=document.activeElement;let sel='';
-  if(f&&f.dataset&&f.dataset.act){sel='[data-act="'+f.dataset.act+'"]'+['d','id','k','v'].filter(k=>f.dataset[k]!=null).map(k=>'[data-'+k+'="'+f.dataset[k]+'"]').join('')}
+  if(f&&f.dataset&&f.dataset.act){sel='[data-act="'+f.dataset.act+'"]'+['d','id','k','v','l','s'].filter(k=>f.dataset[k]!=null).map(k=>'[data-'+k+'="'+f.dataset[k]+'"]').join('')}
   else if(f&&f.id)sel='#'+f.id;
-  $('#app').innerHTML=planBar()+`<div class="tabs" role="tablist"><button role="tab" data-act="tab" data-t="week" aria-selected="${tab==='week'}">${ic('cal')}<span>Semana</span></button><button role="tab" data-act="tab" data-t="ex" aria-selected="${tab==='ex'}">${ic('cube')}<span>Ejercicios</span></button><button role="tab" data-act="tab" data-t="share" aria-selected="${tab==='share'}">${ic('share')}<span>Compartir</span></button><button role="tab" data-act="tab" data-t="color" aria-selected="${tab==='color'}">${ic('set')}<span>Ajustes</span></button></div>`+({week,ex:exTab,share:shareTab,color:colorTab}[tab])();
+  $('#app').innerHTML=planBar()+`<div class="tabs" role="tablist"><button role="tab" data-act="tab" data-t="week" aria-selected="${tab==='week'}">${ic('cal')}<span>Semana</span></button><button role="tab" data-act="tab" data-t="ex" aria-selected="${tab==='ex'}">${ic('cube')}<span>Ejercicios</span></button><button role="tab" data-act="tab" data-t="share" aria-selected="${tab==='share'}">${ic('share')}<span>Compartir</span></button><button role="tab" data-act="tab" data-t="color" aria-selected="${tab==='color'}">${ic('set')}<span>Ajustes</span></button></div>`+({week,ex:exTab,share:shareTab,color:colorTab}[tab])();tr($('#app'));
   if(sel){const n=$(sel);if(n)n.focus({preventScroll:true})}
 }
 function auto(){
@@ -288,7 +365,7 @@ function auto(){
   });
 }
 function planText(){
-  return S.name+'\n'+activeDays().map(d=>`\n${DAYS[d]} (${fmt(dayMin(d))})\n`+sorted(d).map(e=>`- ${e.n}, ${e.m} min${e.s>1?', '+e.s+' series':''}${e.d?': '+e.d:''}`).join('\n')).join('\n');
+  return S.name+'\n'+activeDays().map(d=>`\n${tx(DAYS[d])} (${fmt(dayMin(d))})\n`+sorted(d).map(e=>`- ${tx(e.n)}, ${e.m} min${e.s>1?', '+e.s+(R.lang==='en'?' sets':' series'):''}${e.d?': '+tx(e.d):''}`).join('\n')).join('\n');
 }
 let pending=null,impErr='',codeDraft='',delArm=false;
 const PFX='CUBEPLAN1:';
@@ -367,11 +444,17 @@ cube:'<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12
 share:'<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"/>',
 set:'<path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>',
 x:'<path d="M6 6l12 12M18 6L6 18"/>',minus:'<path d="M5 12h14"/>',plus:'<path d="M5 12h14M12 5v14"/>',play:'<path d="M7 4.5v15l12-7.5z"/>'};
-function ic(n){return `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${IC[n]}</svg>`}
-const STYLES=[['base','Predeterminado','Sencillo y neutro, con fuente Figtree e iconos de línea redondeada.','linear-gradient(90deg,#F2F4F8,#17203A)'],['aero','Frutiger Aero','Cristal brillante, cielo azul y burbujas, con tipografía tipo Segoe UI e iconos rellenos y translúcidos.','linear-gradient(90deg,#BFE6FF,#1B8FE0,#DDF6D4)'],['dorfic','DORFic','Blancos luminosos, gris industrial y acentos naranja-rojizo sobre una cuadrícula rígida, con tipografía condensada e iconos de trazo cuadrado.','linear-gradient(90deg,#F1F3F4,#C8CDD2,#E8431B)'],['space','Space Age','Cápsulas redondeadas, cromo y anillos orbitales en tonos verdes, con tipografía ancha e iconos de anillo, al estilo de los años 50 y 60.','linear-gradient(90deg,#E3F3E6,#0F9D58,#B6E34A)'],['y2k','Y2K','Cromo plateado, plástico brillante y destellos rosa y azul eléctrico, con tipografía redonda tecnológica e iconos cromados.','linear-gradient(90deg,#DCE3EE,#8D98AB,#3B5BFF,#FF4FB8)']];
+const IC2={
+aero:{cal:'<rect x="3" y="5" width="18" height="16" rx="6"/><path d="M3 11h18M8 3.5v3M16 3.5v3"/>',cube:'<circle cx="12" cy="12" r="9"/><path d="M7.5 9.5a5.5 5.5 0 0 1 4-3"/>'},
+space:{cal:'<circle cx="12" cy="12" r="9"/><path d="M12 6.5V12l3.8 2.2"/>',cube:'<circle cx="12" cy="12" r="5"/><ellipse cx="12" cy="12" rx="10" ry="3.6" transform="rotate(-25 12 12)"/>',share:'<circle cx="12" cy="12" r="2.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2 2M16.4 16.4l2 2M18.4 5.6l-2 2M7.6 16.4l-2 2"/>'},
+y2k:{cal:'<rect x="3" y="5" width="18" height="16" rx="7"/><path d="M3 10.5h18M8 3v4M16 3v4"/>',cube:'<path d="M12 2.5l2.4 7.1 7.1 2.4-7.1 2.4L12 21.5l-2.4-7.1L2.5 12l7.1-2.4z"/>',share:'<path d="M6 9l3 3-3 3-3-3zM18 3l3 3-3 3-3-3zM18 15l3 3-3 3-3-3z"/><path d="M8.7 10.6l6.6-3.2M8.7 13.4l6.6 3.2"/>'},
+moderne:{cal:'<rect x="3" y="5" width="18" height="16" rx="5"/><path d="M3 10h18M6 14h8M6 17.5h5"/>',cube:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/>',share:'<path d="M3 8h8M3 12h12M3 16h8"/><path d="M15 6l6 6-6 6"/>'},
+bauhaus:{cal:'<rect x="3" y="4" width="18" height="17"/><path d="M3 9h18"/><circle cx="8" cy="15" r="2"/><path d="M13 18l3-4.5 3 4.5z"/>',cube:'<circle cx="7.5" cy="7.5" r="4"/><rect x="13" y="3.5" width="8" height="8"/><path d="M12 21l5-9 5 9z"/>',share:'<circle cx="6" cy="12" r="3"/><rect x="15" y="3" width="6" height="6"/><path d="M15 21l3-6 3 6z"/><path d="M9 11l6-4M9 13l6 4"/>',set:'<path d="M4 7h16M4 17h16"/><rect x="12" y="4" width="6" height="6"/><circle cx="8" cy="17" r="2.5"/>'}};
+function ic(n){const s=R.style||'base',p=(IC2[s]&&IC2[s][n])||IC[n];return `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${p}</svg>`}
+const STYLES=[['base','Predeterminado','Sencillo y neutro, con fuente Figtree e iconos de línea redondeada.','linear-gradient(90deg,#F2F4F8,#17203A)'],['aero','Frutiger Aero','Cristal brillante, cielo azul y burbujas, con tipografía Open Sans e iconos rellenos y translúcidos.','linear-gradient(90deg,#BFE6FF,#1B8FE0,#DDF6D4)'],['dorfic','DORFic','Blancos luminosos, gris industrial y acentos naranja-rojizo sobre una cuadrícula rígida, con tipografía condensada e iconos de trazo cuadrado.','linear-gradient(90deg,#F1F3F4,#C8CDD2,#E8431B)'],['space','Space Age','Cápsulas redondeadas, cromo y anillos orbitales en tonos verdes, con tipografía ancha e iconos de anillo, al estilo de los años 50 y 60.','linear-gradient(90deg,#E3F3E6,#0F9D58,#B6E34A)'],['y2k','Y2K','Cromo plateado, plástico brillante y destellos rosa y azul eléctrico, con tipografía redonda tecnológica e iconos cromados.','linear-gradient(90deg,#DCE3EE,#8D98AB,#3B5BFF,#FF4FB8)'],['moderne','Streamline Moderne','Crema, azul marino y turquesa con líneas de velocidad, esquinas aerodinámicas y ojos de buey, con tipografía Federo y Josefin Sans e iconos de trazo redondeado.','linear-gradient(90deg,#F3ECDD,#1C7C8C,#E4795B,#1B2A3A)'],['bauhaus','Bauhaus','Rojo, amarillo y azul primarios sobre papel claro, con círculos, cuadrados y triángulos, bordes negros y sombras planas, con tipografía League Spartan y Outfit e iconos geométricos.','linear-gradient(90deg,#D62828 0 33%,#F2B705 33% 66%,#1D4E9E 66%)']];
 function stylePanel(){
   const cur=R.style||'base';
-  return `<section class="panel"><h2>Tema visual</h2><p class="note">Cada tema cambia los colores, la fuente y los iconos. Al elegir uno se restablecen tus colores personalizados; después puedes volver a cambiarlos más abajo.</p><div class="themes">${STYLES.map(s=>`<button data-act="style" data-s="${s[0]}" aria-pressed="${cur===s[0]}"><strong>${s[1]}</strong><small>${s[2]}</small><span class="sw" style="background:${s[3]}"></span></button>`).join('')}</div></section>`;
+  return `<section class="panel"><h2>Tema visual</h2><p class="note">Cada tema cambia los colores, las fuentes (títulos y texto) y los iconos. Al elegir uno se restablecen tus colores personalizados; después puedes volver a cambiarlos más abajo.</p><div class="themes">${STYLES.map(s=>`<button data-act="style" data-s="${s[0]}" aria-pressed="${cur===s[0]}"><strong>${s[1]}</strong><small>${s[2]}</small><span class="sw" style="background:${s[3]}"></span></button>`).join('')}</div></section>`;
 }
 function colorTab(){
   const t=R.theme||{},cs=getComputedStyle(document.documentElement);
@@ -384,6 +467,73 @@ function colorTab(){
   <div class="btns"><button class="sec" data-act="resetcolors">Restablecer colores</button></div></section>`;
 }
 let T=null,tick=null;
+const TAG='Diseña tu semana de speedcubing: elige los días, la duración de cada sesión y los ejercicios, con sus series y su descripción.';
+const EN={
+'Rojo, amarillo y azul primarios sobre papel claro, con círculos, cuadrados y triángulos, bordes negros y sombras planas, con tipografía League Spartan y Outfit e iconos geométricos.':'Primary red, yellow and blue on light paper, with circles, squares and triangles, black borders and flat shadows, with League Spartan and Outfit type and geometric icons.',
+'Plan activo':'Active plan','Nuevo plan':'New plan','Duplicar':'Duplicate','Eliminar':'Delete','Toca para confirmar':'Tap to confirm','Sin nombre':'Unnamed','Mi plan semanal':'My weekly plan',
+[TAG]:'Design your speedcubing week: choose the days, the length of each session and the exercises, with their sets and description.',
+'Semana':'Week','Ejercicios':'Exercises','Compartir':'Share','Ajustes':'Settings',
+'Nombre del plan':'Plan name','Días de entrenamiento':'Training days','Duración de cada sesión':'Length of each session','Minutos por sesión':'Minutes per session','Quitar 5 minutos':'Remove 5 minutes','Añadir 5 minutos':'Add 5 minutes','Repartir automáticamente':'Auto-distribute','Copiar plan':'Copy plan',
+'Elige al menos un día para empezar a montar tu semana.':'Pick at least one day to start building your week.','Este plan aún no tiene ejercicios. Créalos en la pestaña Ejercicios.':'This plan has no exercises yet. Create them in the Exercises tab.',
+'Sesión completa':'Session complete','+ Añadir ejercicio':'+ Add exercise','Iniciar sesión':'Start session','Sin descripción.':'No description.',
+'Nuevo ejercicio':'New exercise','Editar ejercicio':'Edit exercise','Nombre':'Name','Ej.: Práctica de PLL':'E.g.: PLL practice','Bloque':'Section','Minutos':'Minutes','Series':'Sets','Descripción: qué hay que hacer':'Description: what to do','Explica cómo se hace, cuántas repeticiones y en qué fijarse.':'Explain how it is done, how many repetitions and what to watch for.','Guardar cambios':'Save changes','Añadir ejercicio':'Add exercise','Cancelar':'Cancel','Escribe un nombre para el ejercicio.':'Enter a name for the exercise.','Editar':'Edit','Sin asignar esta semana':'Not assigned this week',
+'Compartir mi plan':'Share my plan','Envía el código por mensaje o descarga el archivo. Quien lo reciba puede importarlo aquí mismo, sin crear cuenta.':'Send the code in a message or download the file. Whoever receives it can import it right here, no account needed.','Código del plan':'Plan code','Copiar código':'Copy code','Descargar archivo':'Download file','Importar un plan':'Import a plan','Pega un código o elige un archivo. Podrás añadirlo como plan nuevo o reemplazar el plan activo.':'Paste a code or choose a file. You can add it as a new plan or replace the active one.','Código':'Code','O archivo':'Or file','El código o el archivo no es válido. Revisa que esté completo.':'The code or file is not valid. Check that it is complete.','Revisar plan':'Review plan','Añadir como plan nuevo':'Add as new plan','Reemplazar plan activo':'Replace active plan','No se pudo leer el archivo.':'Could not read the file.',
+'Tema visual':'Visual theme','Cada tema cambia los colores, las fuentes (títulos y texto) y los iconos. Al elegir uno se restablecen tus colores personalizados; después puedes volver a cambiarlos más abajo.':'Each theme changes the colors, fonts (titles and text) and icons. Choosing one resets your custom colors; you can change them again below.','Predeterminado':'Default',
+'Sencillo y neutro, con fuente Figtree e iconos de línea redondeada.':'Simple and neutral, with Figtree font and rounded line icons.','Cristal brillante, cielo azul y burbujas, con tipografía Open Sans e iconos rellenos y translúcidos.':'Glossy glass, blue sky and bubbles, with Open Sans type and filled, translucent icons.','Blancos luminosos, gris industrial y acentos naranja-rojizo sobre una cuadrícula rígida, con tipografía condensada e iconos de trazo cuadrado.':'Bright whites, industrial gray and orange-red accents on a rigid grid, with condensed type and square-stroke icons.','Cápsulas redondeadas, cromo y anillos orbitales en tonos verdes, con tipografía ancha e iconos de anillo, al estilo de los años 50 y 60.':'Rounded capsules, chrome and orbital rings in shades of green, with wide type and ring icons, in 1950s and 60s style.','Cromo plateado, plástico brillante y destellos rosa y azul eléctrico, con tipografía redonda tecnológica e iconos cromados.':'Silver chrome, glossy plastic and pink and electric blue sparkles, with round techno type and chrome icons.','Crema, azul marino y turquesa con líneas de velocidad, esquinas aerodinámicas y ojos de buey, con tipografía Federo y Josefin Sans e iconos de trazo redondeado.':'Cream, navy and teal with speed lines, streamlined corners and portholes, with Federo and Josefin Sans type and round-stroke icons.',
+'Apartados del plan':'Plan sections','Cambia los nombres de los apartados en los que se divide cada sesión. Se aplican solo al plan activo.':'Rename the sections each session is divided into. They apply only to the active plan.','Restablecer nombres':'Reset names','Colores de la interfaz':'Interface colors','Escribe un código hexadecimal como #2F5BEA o usa el selector. El texto se ajusta solo para que se lea bien.':'Type a hex code like #2F5BEA or use the picker. Text adjusts automatically so it stays readable.','Color principal (botones, días y pestañas)':'Main color (buttons, days and tabs)','Color de fondo':'Background color','Selector de color principal (botones, días y pestañas)':'Main color picker (buttons, days and tabs)','Selector de color de fondo':'Background color picker','Los colores de los bloques de ejercicio no cambian, para que sigas distinguiéndolos.':'Exercise section colors do not change, so you can still tell them apart.','Restablecer colores':'Reset colors',
+'Calentamiento':'Warm-up','Principal':'Main','Accesorio':'Accessory','Vuelta a la calma':'Cool-down',
+'Sesión en curso':'Session in progress','Ejercicio anterior':'Previous exercise','Ejercicio siguiente':'Next exercise','Pausar':'Pause','Reanudar':'Resume','Terminar':'Finish','Cerrar':'Close','¡Sesión completada!':'Session complete!',
+'Sesiones repartidas':'Sessions distributed','Plan copiado':'Plan copied','No se pudo copiar':'Could not copy','Código copiado':'Code copied','Selecciona el código y cópialo':'Select the code and copy it','Ejercicio añadido':'Exercise added','Cambios guardados':'Changes saved','Plan importado':'Plan imported','Ya tienes 10 planes':'You already have 10 plans','La descarga no está disponible aquí, usa el código':'Download is not available here, use the code','No se pudo guardar el archivo':'Could not save the file','Este día no tiene ejercicios':'This day has no exercises','Toca de nuevo para eliminar este plan':'Tap again to delete this plan',
+'Lunes':'Monday','Martes':'Tuesday','Miércoles':'Wednesday','Jueves':'Thursday','Viernes':'Friday','Sábado':'Saturday','Domingo':'Sunday','Lun':'Mon','Mar':'Tue','Mié':'Wed','Jue':'Thu','Vie':'Fri','Sáb':'Sat','Dom':'Sun','L':'M','M':'T','X':'W','J':'T','V':'F','S':'S','D':'S',
+'Calentamiento libre':'Free warm-up','Resuelve cubos sin cronómetro a ritmo suave. Busca fluidez, no velocidad.':'Solve cubes without a timer at a gentle pace. Aim for flow, not speed.',
+'Solves cronometrados (Ao5)':'Timed solves (Ao5)','Series de 5 solves con cronómetro. Anota la media de cada serie y no pares entre solves.':'Sets of 5 timed solves. Write down the average of each set and do not stop between solves.',
+'Práctica de PLL':'PLL practice','Elige 4 casos de PLL débiles. Repite cada uno 10 veces, primero despacio y luego a velocidad.':'Pick 4 weak PLL cases. Repeat each one 10 times, slowly first and then at speed.',
+'Práctica de OLL':'OLL practice','Reconoce y ejecuta los OLL que aún no te salen automáticos. Prioriza el reconocimiento.':'Recognize and execute the OLLs that are not automatic yet. Prioritize recognition.',
+'F2L lento con lookahead':'Slow F2L with lookahead','Resuelve solo cruz y F2L muy despacio, buscando la siguiente pareja mientras ejecutas la actual.':'Solve only cross and F2L very slowly, looking for the next pair while executing the current one.',
+'Cruz en 8 movimientos':'8-move cross','Inspecciona 15 segundos y planifica la cruz completa antes de tocar el cubo.':'Inspect for 15 seconds and plan the whole cross before touching the cube.',
+'Ejecución de algoritmos (TPS)':'Algorithm execution (TPS)','Repite un algoritmo largo 20 veces buscando más movimientos por segundo, sin trabarte.':'Repeat a long algorithm 20 times aiming for more moves per second, without locking up.',
+'Análisis de solves':'Solve analysis','Revisa tus 3 peores solves de hoy, anota dónde perdiste tiempo y elige un foco para la próxima sesión.':'Review your 3 worst solves today, note where you lost time and pick a focus for the next session.'};
+const PAT=[
+[/^(\d+) de 10$/,m=>m[1]+' of 10'],[/^(\d+) por semana$/,m=>m[1]+' per week'],
+[/^(\d+) (sesión|sesiones), (.+) de práctica a la semana$/,m=>m[1]+(m[2]==='sesión'?' session, ':' sessions, ')+m[3]+' of practice per week'],
+[/^(\d+ h(?: \d+ min)?|\d+ min) de (\d+ h(?: \d+ min)?|\d+ min)$/,m=>m[1]+' of '+m[2]],
+[/^Te pasas (\d+) min$/,m=>m[1]+' min over'],[/^Quedan (\d+) min libres$/,m=>m[1]+' min left'],
+[/^(.+), (\d+) series$/,m=>tx(m[1])+', '+m[2]+' sets'],
+[/^Quitar (.+)$/,m=>'Remove '+tx(m[1])],[/^Añadir ejercicio el (.+)$/,m=>'Add exercise on '+tx(m[1])],
+[/^(.+) \((\d+) min\)$/,m=>tx(m[1])+' ('+m[2]+' min)'],
+[/^(\d+) (vez|veces) por semana \((.+)\)$/,m=>m[1]+(m[2]==='vez'?' time':' times')+' per week ('+m[3].split(', ').map(tx).join(', ')+')'],
+[/^Apartado (\d+)$/,m=>'Section '+m[1]],
+[/^(\d+) ejercicios, (\d+) sesiones por semana de (\d+) min$/,m=>m[1]+' exercises, '+m[2]+' sessions per week of '+m[3]+' min'],
+[/^Ejercicio (\d+) de (\d+), serie (\d+) de (\d+)\. Quedan (.+) en total\.$/,m=>'Exercise '+m[1]+' of '+m[2]+', set '+m[3]+' of '+m[4]+'. '+m[5]+' left in total.'],
+[/^Ejercicio (\d+) de (\d+)\. Quedan (.+) en total\.$/,m=>'Exercise '+m[1]+' of '+m[2]+'. '+m[3]+' left in total.'],
+[/^(.+) \(copia\)$/,m=>tx(m[1])+' (copy)']];
+function tx(s){
+  if(!R||R.lang!=='en'||!s)return s;
+  const k=String(s).trim();if(!k)return s;
+  if(Object.prototype.hasOwnProperty.call(EN,k))return s.replace(k,()=>EN[k]);
+  for(const [re,fn] of PAT){const m=k.match(re);if(m)return s.replace(k,()=>fn(m))}
+  return s;
+}
+function tr(root){
+  if(!root||!R||R.lang!=='en')return;
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),list=[];let n;
+  while((n=w.nextNode()))list.push(n);
+  list.forEach(x=>{const v=tx(x.nodeValue);if(v!==x.nodeValue)x.nodeValue=v});
+  root.querySelectorAll('[aria-label],[placeholder]').forEach(el=>['aria-label','placeholder'].forEach(a=>{const v=el.getAttribute(a);if(v){const t=tx(v);if(t!==v)el.setAttribute(a,t)}}));
+  root.querySelectorAll('input[data-f="name"]').forEach(el=>{el.value=tx(el.value)});
+}
+function applyLang(){
+  document.documentElement.lang=R.lang==='en'?'en':'es';
+  $('#tag').textContent=tx(TAG);
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.l===R.lang)));
+}
+function setupLang(){
+  if(!R.lang)R.lang=(navigator.language||'').toLowerCase().startsWith('en')?'en':'es';
+  applyLang();
+  try{new MutationObserver(()=>tr($('#timer'))).observe($('#timer'),{childList:true})}catch(e){}
+}
+function weekDays(id){return activeDays().filter(d=>(S.assign[d]||[]).includes(id))}
+function cntTxt(id){const w=weekDays(id);return w.length?`<span class="cnt">${w.length} ${w.length===1?'vez':'veces'} por semana (${w.map(d=>DAYS[d].slice(0,3)).join(', ')})</span>`:'<span class="cnt zero">Sin asignar esta semana</span>'}
 function rowCls(d,e){if(!T||T.d!==d||T.p!==R.cur||T.done)return'';const c=T.list[T.idx];return c.id===e.id?' active':(c.b===e.b?' inblock':'')}
 const fmtT=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
 function cue(end){
@@ -417,7 +567,7 @@ function tickUI(){
   const rest=l+T.list.slice(T.idx+1).reduce((s,x)=>s+x.m*60,0);
   $('#tmleft').textContent=fmtT(l);
   $('#tmbar').style.width=((tot-l)/tot*100)+'%';
-  $('#tmsub').textContent=`Ejercicio ${T.idx+1} de ${T.list.length}${e.s>1?', serie '+k+' de '+e.s:''}. Quedan ${fmtT(rest)} en total.`;
+  $('#tmsub').textContent=tx(`Ejercicio ${T.idx+1} de ${T.list.length}${e.s>1?', serie '+k+' de '+e.s:''}. Quedan ${fmtT(rest)} en total.`);
 }
 document.addEventListener('click',ev=>{
   const t=ev.target.closest('button[data-act]');if(!t)return;
@@ -438,6 +588,7 @@ document.addEventListener('click',ev=>{
   else if(a==='addimport')applyImport(true);
   else if(a==='cancelimport')pending=null;
   else if(a==='style'){R.style=t.dataset.s;R.theme={};applyTheme()}
+  else if(a==='lang'){R.lang=t.dataset.l;applyLang();if(T)renderTimer()}
   else if(a==='tstart'){startSession(d);return}
   else if(a==='tpause'){toggleRun();return}
   else if(a==='tnext'){nextEx();return}
@@ -480,7 +631,7 @@ document.addEventListener('input',ev=>{
     save();applyTheme();
   }
 });
-applyTheme();
+setupLang();applyTheme();
 render();
 </script>
 </body>
